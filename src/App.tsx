@@ -1,13 +1,12 @@
-
-
 import './App.css'
+import Header from './components/Header'
 
 function App() {
   
 
   return (
     <>
-      <h1 className='bg-amber-300'>hello  react</h1>
+      <Header/>
     </>
   )
 }
