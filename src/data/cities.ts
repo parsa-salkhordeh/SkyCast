@@ -1,4 +1,8 @@
-export const cities = [
+interface city{
+  name:string,
+  value:string
+}
+export const cities:city[] = [
   {
     name: "تهران",
     value: "tehran",
