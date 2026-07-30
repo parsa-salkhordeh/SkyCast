@@ -8,7 +8,7 @@ export default function Header() {
         <img src={logo} alt="Weather Logo" className="h-10 w-10" />
 
         <h1 className="text-2xl font-bold text-slate-800">
-          هواشناسی ⭐
+            هواشناسی☀️
         </h1>
       </div>
     </header>
