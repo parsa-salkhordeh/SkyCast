@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     async function getWeather() {
       try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`);
 
         const data = await response.json();
         setWeather(data)
@@ -38,3 +38,6 @@ function App() {
 }
 
 export default App;
+
+
+// https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}
