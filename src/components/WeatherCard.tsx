@@ -1,3 +1,5 @@
+import Loading from "./Loading"
+
 type weathercard={
   data:{
     name:string
@@ -5,7 +7,7 @@ type weathercard={
 }
 
 export default function WeatherCard({data}:weathercard) {
-  
+  if(!data) return <Loading/>
   return (
    <div className="mx-auto mt-8 max-w-sm rounded-2xl bg-white p-6 shadow-lg">
       <h2 className="text-xl font-bold text-slate-800">
