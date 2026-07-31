@@ -1,5 +1,15 @@
+export type Country = {
+  name: string;
+  value: string;
+  cities: City[];
+};
 
-export const countries= [
+export type City = {
+  name: string;
+  value: string;
+};
+
+export const countries: Country[]= [
   {
     name: "ایران",
     value: "iran",
