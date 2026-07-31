@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import CitySelect from "./components/CitySelect";
 import Header from "./components/Header";
 import WeatherCard from "./components/WeatherCard";
+import CountrySelect from "./components/CountrySelect";
 
 function App() {
   const [city, setCity] = useState<string>("Tehran");
@@ -31,7 +31,7 @@ function App() {
     return (
     <>
       <Header />
-      <CitySelect setCity={setCity}/>
+      <CountrySelect setCity={setCity}/>
       <WeatherCard data={weather}/>
     </>
   );
@@ -40,4 +40,3 @@ function App() {
 export default App;
 
 
-// https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}
