@@ -16,7 +16,6 @@ export default function CountrySelect({setCity}:{setCity: (value: string) => voi
         value={country}
         onChange={(e) => setCountry(e.target.value)}
       >
-        <option value="">انتخاب کشور:</option>
 
         
           {

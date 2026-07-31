@@ -7,7 +7,6 @@ export default function CitySelect({setCity, selectedCountry}:{setCity: (value: 
         className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-right outline-none focus:border-sky-500"
         onChange={(e) => setCity(e.target.value)}
       >
-        <option value="">انتخاب شهر:</option>
 
         {selectedCountry?.cities.map((city) => (
           <option key={city.value} value={city.value}>
