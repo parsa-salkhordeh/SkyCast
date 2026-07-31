@@ -1,9 +1,21 @@
 import Loading from "./Loading"
 
 type weathercard={
-  data:{
-    name:string
-  }| null
+  data: {
+    name: string;
+    main: {
+      temp: number;
+      humidity:number;
+    };
+    wind:{
+      speed:number;
+    };
+    weather: {
+      main: string;
+      description: string;
+      icon: string;
+    }[];
+  } | null;
 }
 
 export default function WeatherCard({data}:weathercard) {
@@ -20,12 +32,16 @@ export default function WeatherCard({data}:weathercard) {
         </div>
 
         <p className="mt-3 text-4xl font-bold text-sky-500">
-          32°C
+          {data.main.temp}
         </p>
 
         <p className="mt-2 text-slate-500">
           آفتابی
         </p>
+        <div className="mt-4 flex justify-between text-slate-500">
+          <p>رطوبت:{data.main.humidity}</p>
+          <p>سرعت باد:{data.wind.speed}</p>
+        </div>
       </div>
     </div>
   )
