@@ -26,7 +26,7 @@ function App() {
     getWeather();
   }, [city]);
   
-    
+    console.log(weather)
   
     return (
     <>

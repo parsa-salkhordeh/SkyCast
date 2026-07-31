@@ -1,4 +1,11 @@
-export default function WeatherCard({data}) {
+type weathercard={
+  data:{
+    name:string
+  }| null
+}
+
+export default function WeatherCard({data}:weathercard) {
+  
   return (
    <div className="mx-auto mt-8 max-w-sm rounded-2xl bg-white p-6 shadow-lg">
       <h2 className="text-xl font-bold text-slate-800">
