@@ -1,8 +1,8 @@
-export default function WeatherCard() {
+export default function WeatherCard({data}) {
   return (
    <div className="mx-auto mt-8 max-w-sm rounded-2xl bg-white p-6 shadow-lg">
       <h2 className="text-xl font-bold text-slate-800">
-        تهران
+       {data.name}
       </h2>
 
       <div className="my-6 text-center">
