@@ -78,5 +78,57 @@ export const countries: Country[]= [
       { name: "والنسیا", value: "valencia" },
       { name: "سویا", value: "sevilla" }
     ]
-  }
+  },
+
+
+  {
+  name: "عراق",
+  value: "iraq",
+  cities: [
+    { name: "بغداد", value: "baghdad" },
+    { name: "بصره", value: "basra" },
+    { name: "موصل", value: "mosul" },
+    { name: "اربیل", value: "erbil" },
+    { name: "نجف", value: "najaf" },
+    { name: "کربلا", value: "karbala" },
+    { name: "سلیمانیه", value: "sulaymaniyah" },
+    { name: "کرکوک", value: "kirkuk" },
+    { name: "ناصریه", value: "nasiriyah" },
+    { name: "فلوجه", value: "fallujah" }
+  ]
+},
+
+{
+  name: "عمان",
+  value: "oman",
+  cities: [
+    { name: "مسقط", value: "muscat" },
+    { name: "صلاله", value: "salalah" },
+    { name: "صحار", value: "sohar" },
+    { name: "نزوی", value: "nizwa" },
+    { name: "صور", value: "sur" },
+    { name: "عبری", value: "ibri" },
+    { name: "برکاء", value: "barka" },
+    { name: "خصب", value: "khasab" },
+    { name: "الرستاق", value: "rustaq" },
+    { name: "بهلاء", value: "bahla" }
+  ]
+},
+
+{
+  name: "روسیه",
+  value: "russia",
+  cities: [
+    { name: "مسکو", value: "moscow" },
+    { name: "سن پترزبورگ", value: "saint-petersburg" },
+    { name: "نووسیبیرسک", value: "novosibirsk" },
+    { name: "یکاترینبورگ", value: "yekaterinburg" },
+    { name: "کازان", value: "kazan" },
+    { name: "نیژنی نووگورود", value: "nizhny-novgorod" },
+    { name: "چلیابینسک", value: "chelyabinsk" },
+    { name: "اومسک", value: "omsk" },
+    { name: "سامارا", value: "samara" },
+    { name: "روستوف-نا-دونو", value: "rostov-on-don" }
+  ]
+}
 ];
