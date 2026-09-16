@@ -1,4 +1,3 @@
-import Loading from "./Loading"
 import {getweatherEmoji} from "../data/emoji"
 
 
@@ -25,7 +24,7 @@ type weathercard={
 
 export default function WeatherCard({data}:weathercard) {
  
-  if(!data) return <Loading/>
+  if(!data) return <h1 className="text-red-500 mt-2 font-bold text-center bg-amber-300 p-3 max-w-sm  mx-auto rounded-2xl">دریافت اطلاعات با خطا مواجه شد</h1>
 
    const emoji = getweatherEmoji(data.weather[0].main);
   return (

@@ -10,6 +10,7 @@ function App() {
   //برای اینکه بتونیم دیتامونو به Weathercard پاس بدیم
   const [weather, setWeather] = useState(null);
   
+
   useEffect(() => {
     async function getWeather() {
       try {
@@ -17,9 +18,10 @@ function App() {
 
         const data = await response.json();
         setWeather(data)
-        console.log(data);
+
       } catch (error) {
         console.log(error);
+        
       }
     }
 
