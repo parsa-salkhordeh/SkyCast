@@ -120,7 +120,6 @@ export const countries: Country[]= [
   value: "russia",
   cities: [
     { name: "مسکو", value: "moscow" },
-    { name: "سن پترزبورگ", value: "saint-petersburg" },
     { name: "نووسیبیرسک", value: "novosibirsk" },
     { name: "یکاترینبورگ", value: "yekaterinburg" },
     { name: "کازان", value: "kazan" },

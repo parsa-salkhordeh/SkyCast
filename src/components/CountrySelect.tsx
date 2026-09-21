@@ -1,10 +1,15 @@
-import { useState } from "react";
+
 import { countries} from "../data/countries";
 import CitySelect from "./CitySelect";
 
+type Country={
+  setCity: (value: string) => void;
+  country: string;
+  setCountry: (value: string) => void;
+}
 
-export default function CountrySelect({setCity}:{setCity: (value: string) => void;}) {
-    const [country, setCountry] = useState<string>("iran");
+export default function CountrySelect({setCity , country , setCountry}:Country) {
+    
     const selectedCountry= countries.find(
     (item) => item.value === country
     );
