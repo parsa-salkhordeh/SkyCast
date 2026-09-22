@@ -1,75 +1,55 @@
-# React + TypeScript + Vite
+# 🌤️ SkyCast
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+یک اپلیکیشن نمایش آب‌وهوا که با **React، TypeScript و Tailwind CSS** ساخته شده است. داده‌های آب‌وهوایی از **OpenWeather API** دریافت می‌شوند.
 
-Currently, two official plugins are available:
+## امکانات
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* نمایش دمای هوا
+* نمایش رطوبت و سرعت باد
+* نمایش وضعیت کلی آب‌وهوا
+* نمایش ایموجی متناسب با وضعیت هوا
+* نمایش پیام خطا در صورت نامعتبر بودن نام شهر یا بروز مشکل در دریافت اطلاعات
+* مدیریت حالت‌های Loading، Success و Error برای تجربه کاربری بهتر
+* طراحی Responsive و راست‌چین (RTL)
 
-## React Compiler
+## تکنولوژی‌های استفاده‌شده
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React
+* TypeScript
+* Tailwind CSS
+* OpenWeather API
+* Vite
 
-## Expanding the ESLint configuration
+## نحوه اجرا
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 1. نصب وابستگی‌ها
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. اجرای پروژه در حالت توسعه
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run dev
 ```
+
+## چالش‌ها و راه‌حل‌ها
+
+### هماهنگی استیت شهر و کشور
+
+در ابتدا فقط با تغییر نام شهر، آب‌وهوای شهر جدید به‌درستی نمایش داده می‌شد، اما با تغییر کشور، داده‌ها به‌روزرسانی نمی‌شدند.
+
+برای رفع این مشکل، استیت مربوط به کشور به `App.tsx` منتقل شد تا شهر و کشور از یک منبع مشترک مدیریت شوند و تغییر هرکدام باعث به‌روزرسانی صحیح داده‌ها شود.
+
+
+### مدبریت لودینگ و خطا های Api 
+
+در صورت بروز خطا هنگام دریافت اطلاعات، مانند مشکلات اتصال به شبکه یا خطاهای API، پیام خطا در کامپوننت WeatherCard نمایش داده می‌شود.
+
+همچنین وضعیت Loading و Success در کامپوننت App.tsx مدیریت شده و بر اساس وضعیت درخواست، رابط کاربری به‌روزرسانی می‌شود
+
+## 👨‍💻 توسعه‌دهنده
+
+**Parsa Salkhordeh**
+
