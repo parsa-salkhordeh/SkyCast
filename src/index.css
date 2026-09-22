@@ -1,1 +1,14 @@
 @import "tailwindcss";
+body{
+  background-image: url("../public/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  body {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+}

@@ -7,7 +7,7 @@ export default function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center gap-3 px-6">
         <img src={logo} alt="Weather Logo" className="h-10 w-10" />
 
-        <h1 className="text-2xl font-bold text-white">
+        <h1 className="text-2xl font-bold text-yellow-300 md:text-white">
             هواشناسی☀️
         </h1>
       </div>
