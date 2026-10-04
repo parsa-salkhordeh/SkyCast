@@ -1,4 +1,6 @@
 # 🌤️ SkyCast
+Gif:
+https://imgur.com/a/QgguGg9
 
 یک اپلیکیشن نمایش آب‌وهوا که با **React، TypeScript و Tailwind CSS** ساخته شده است. داده‌های آب‌وهوایی از **OpenWeather API** دریافت می‌شوند.
 
